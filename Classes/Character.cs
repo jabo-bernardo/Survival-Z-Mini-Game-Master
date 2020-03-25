@@ -52,6 +52,9 @@ namespace Shooting_Games.Classes
         public int CharacterCoins { get; set; }
         public int CharacterMedkits { get; set; }
 
+        // GUN
+        public Gun gunType { get; set; }
+
         // Constructor
         public Character(double speed = 0.20, double health = 100.0, int max_stamina = 100, int stamina = 0 , int ammo = 7, int coins = 0, int medkits = 10)
         {
@@ -76,6 +79,8 @@ namespace Shooting_Games.Classes
             this.CharacterAmmo = ammo;
             this.CharacterCoins = coins;
             this.CharacterMedkits = medkits;
+
+            this.gunType = new Guns.Pistol();
         }
 
         public Label GetCharacterTextControl()

@@ -96,6 +96,8 @@
     <Compile Include="Classes\Character.cs" />
     <Compile Include="Classes\Coins.cs" />
     <Compile Include="Classes\Global.cs" />
+    <Compile Include="Classes\Gun.cs" />
+    <Compile Include="Classes\Guns\Pistol.cs" />
     <Compile Include="Classes\Keyboard.cs" />
     <Compile Include="Classes\Bullet.cs" />
     <Compile Include="Classes\SoundFX.cs" />

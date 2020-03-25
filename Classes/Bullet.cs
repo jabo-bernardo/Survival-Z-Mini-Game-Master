@@ -62,8 +62,6 @@ namespace Shooting_Games.Classes
             return this.BulletBound;
         }
 
-
-
         public void SetBulletPos(Control character)
         {
             // Set the bullet position depending on the character rotation.
@@ -98,10 +96,10 @@ namespace Shooting_Games.Classes
         }
 
          /* Bullets Projectile */
-        public void ShootBullet()
+        public void ShootBullet(Gun gunType)
         {
             double[] charPosition = new double[2]; // Declare Character Position Array for storing x and y
-            double velocity = 100; // Set the velocity.
+            double velocity = gunType.bulletVelocity; // Set the velocity.
             switch (this.BulletDirection)
             {
                 case Global.FACING_DIRECTION_UP: // up

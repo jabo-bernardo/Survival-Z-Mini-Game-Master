@@ -664,7 +664,7 @@ namespace Shooting_Games
             {
                 if (bulletObj[i] != null)
                 {
-                    bulletObj[i].ShootBullet();
+                    bulletObj[i].ShootBullet(player_One.gunType);
                 }
             }
         }
