@@ -228,5 +228,10 @@ namespace Shooting_Games.Classes
             this.CharacterText.Location = new Point((int)charPosition[0] + 2, (int)charPosition[1] - 16); // Update the Label Location based on X and Y
             this.CharacterControl.Location = new Point((int)charPosition[0], (int)charPosition[1]); // Update the Character position based on X and Y
         }
+
+        public void setGun(Gun gun)
+        {
+            this.gunType = gun;
+        }
     }
 }

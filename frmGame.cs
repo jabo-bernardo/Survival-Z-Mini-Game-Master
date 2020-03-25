@@ -85,7 +85,6 @@ namespace Shooting_Games
             CHARACTER_NORMAL_SPEED =                                0.020,      // Character Norma Speed             
 
             ZOMBIE_DAMAGE =                                         5.0,        // Zombie Damage to the character 5.0 per attack you can increase this according to your taste.
-            HANDGUN_DAMAGE =                                        30.0,       // Weapon Damage 30.0 you can increase this according to your taste.
             CRITICAL_DAMAGE =                                       1.5,        // CRITICAL_DAMAGE 1.5 * HANDGUN_DAMAGE 30.0 = 45.0 (Damage to the zombie) Critical Hit
             CRITICAL_RATE =                                         25,         // Critical Hit Rate or what we call Luck this determine the chance to trigger critical damage.
             
@@ -788,10 +787,10 @@ namespace Shooting_Games
                                 
                                 Random rand = new Random();
                                 int critChance = rand.Next(1, 100);
-                                double damage = (critChance < CRITICAL_RATE && ENABLE_CRITICAL_DAMAGE) ? (CRITICAL_DAMAGE * HANDGUN_DAMAGE) : (HANDGUN_DAMAGE);
+                                double damage = (critChance < CRITICAL_RATE && ENABLE_CRITICAL_DAMAGE) ? (CRITICAL_DAMAGE * player_One.gunType.damage) : (player_One.gunType.damage);
                                 zombiesObj[x].ZombieHealth -= damage;
 
-                                if(damage > HANDGUN_DAMAGE) Console.WriteLine("CRIT Damage: " + damage);
+                                if(damage > player_One.gunType.damage) Console.WriteLine("CRIT Damage: " + damage);
                                 else Console.WriteLine("Normal Damage: " + damage);
 
                                 zombiesObj[x].GetZombieHPBar().Value = (zombiesObj[x].ZombieHealth <= 0) ? (0) : ((int)zombiesObj[x].ZombieHealth);

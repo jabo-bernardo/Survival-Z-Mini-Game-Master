@@ -8,7 +8,7 @@ namespace Shooting_Games.Classes.Guns
 {
     class Pistol : Gun
     {
-        public Pistol() : base(10)
+        public Pistol() : base(30, 100)
         {
 
         }

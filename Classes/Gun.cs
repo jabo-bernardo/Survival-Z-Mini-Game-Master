@@ -10,10 +10,12 @@ namespace Shooting_Games.Classes
     {
 
         public int bulletVelocity { get; set; }
+        public int damage { get; set; }
 
-        public Gun(int bulletVelocity)
+        public Gun(int bulletVelocity, int damage)
         {
             this.bulletVelocity = bulletVelocity;
+            this.damage = damage;
         }
 
     }
